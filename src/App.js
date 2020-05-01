@@ -1,19 +1,36 @@
 import React from 'react';
-import { BrowserRouter , Link , Route } from 'react-router-dom'
-import Home from './component/Home'
-import Contact from './component/Contact';
+import { BrowserRouter  } from 'react-router-dom'
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+import Emart from './component/Emart'
+import Menu from './component/MenuBar';
+import Slider from './component/Slider';
+import Shipping from './component/Shipping';
+import LModal from './component/LModal';
+import RModal from './component/RModal';
+import Collection from './component/Collection';
+import Featured from './component/Featured'
 
 function App() {
   return (
     <div>
       <BrowserRouter>
-        <h2>Teach Project</h2>
 
-        <Link to="/">Home </Link>
-        <Link to="/contact">Contact</Link>
+        {/* <Link to="/">Home </Link>
+        <Link to="/contact">Contact</Link> */}
 
-        <Route path="/" component={Home} exact={true} />
-        <Route path="/contact" component={Contact} />
+        <Emart />
+        <Menu />
+        <Slider />
+        <Shipping />
+        {/* <LModal />
+        <RModal /> */}
+        <Collection />
+
+        <Featured />
+
       </BrowserRouter>
     </div>
   );

@@ -1,0 +1,371 @@
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
+/* Tablet Landscape */
+@media screen and (max-width: 1060px) {
+    #primary { width:67%; }
+    #secondary { width:30%; margin-left:3%;}  
+}
+/* Tabled Portrait */
+@media screen and (max-width: 768px) {
+    #primary { width:100%; }
+    #secondary { width:100%; margin:0; border:none; }
+}
+
+.emart{
+    margin-left: 27%;
+    border-radius: 0px;
+    margin-right: 50%;
+    border: 1.5px solid black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.search-control{
+    margin-left: 2%;
+    border: white;
+}
+
+.emart-navbar{
+    background-color: white !important;
+    margin-top: 3%;
+}
+
+.search-btn{
+    margin-left: 24%;
+}
+
+.icon{
+    margin-right: 8%;
+}
+
+.icon-user{
+    margin-left: -18%;
+}
+
+
+/* ///////////////// MenuBar Page ///////////////////// */
+
+.menu-navbar{
+    background-color: white !important;
+    margin-right: 29%;
+    margin-left: 29%;
+}
+
+.menus{
+    color: black;
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+/* ///////  Slider  //////////// */
+
+.image-slide{
+    margin-top: 2%;
+    width: 100%;
+    height: 480px;
+}
+
+/* /////////// Shipping ///////// */
+
+.truck-icon{
+    width: 100% !important;
+    height: 23%;
+    color: rgb(32, 78, 163);
+    transform: scaleX(-1);
+    margin-left: -40%;
+    margin-top: 5%;
+}
+
+.support-icon{
+    width: 100% !important;
+    height: 23%;
+    color: rgb(32, 78, 163);
+    /* transform: scaleX(-1); */
+    margin-left: -37%;
+    margin-top: 5%;
+}
+
+.row-cols-3 > *{
+    max-width: 27%;
+}
+.h6-tag{
+    margin-left: 25%;
+    margin-top: -16.5%;
+}
+
+.card{
+    margin-right: -2%;
+    /* width: 15%; */
+    border: 0ch;
+    margin-left: 6%;
+}
+
+.ptag{
+    text-align: justify;
+    margin-left: 25%;
+    margin-top: 0%;
+}
+
+.row-div{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+/* /////////// Modal /////// */
+
+.submit-button{
+    height: 38px;
+    width: 120px;
+    border-radius: 1px;
+    margin-top: 10px;
+    background-color: rgba(8, 8, 117, 0.856);
+    /* margin-left: 12%; */
+}
+
+.div1{
+    /* background-color: rgb(253, 253, 253); */
+    margin-left: -.2%;
+    margin-top: -1.8%;
+    margin-bottom: -12.8%;
+
+}
+
+.MuiFormControl-root{
+    width: 220%;
+}
+
+.row-cols-2>*{
+    max-width: 32%;
+}
+
+.div2{
+    background-color: red;
+}
+
+.header{
+    margin-left: 3%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.row{
+    margin-bottom: 5%;
+}
+
+.logo-img{
+    margin-top: 35%;
+    margin-left: -16%;
+}
+
+.logo-img-r{
+    margin-top: 110%;
+    margin-left: -16%;
+}
+
+/* /////////////////////////////// */
+
+/* .dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  } */
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: -20%;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #cecbcb;
+    width: 125px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-right: 30%;
+  }
+  
+  .dropdown-content a {
+    /* color: black; */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* .dropdown-content a:hover {background-color: #ddd;} */
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+  
+ .drop-btn{
+     border-radius: 0px;
+     width: 100%;
+ }
+
+ /* ////////////////// In Login Modal ////////// */
+
+ .rmodal{
+     margin-left: 20%;
+
+ }
+
+ /* /////////////////// collectoin-img ///////////// */
+
+ .collectoin-img{
+     height: 90%;
+     width: 70%;
+     margin-left: 55%;
+     border: 1px solid rgb(1, 1, 14);
+
+     transition: all 1s ease;
+
+    
+ }
+ .collectoin-img:hover{
+    transform: scale(1.1);
+    border: 2px solid rgb(1, 1, 14)
+   
+}
+ .men{
+    margin-left: 57%;
+    margin-top: -21%;
+    color: rgb(255, 255, 255);
+    font-family: 'Dancing Script', cursive;
+
+ }
+
+ .collection{
+    margin-left: 58%;
+    margin-top: -1%;
+    color: rgb(255, 255, 255);
+    font-family: 'Dancing Script', cursive;
+
+ }
+
+ /* //////////// Featured ///////////// */
+
+ .feature-div{
+    background-color: rgb(240, 238, 238);
+    height: 30%;
+ }
+
+ .main-div{
+     height: 10%;
+ }
+
+.h4-div{
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+
+.card-img{
+    height: 70%;
+    width: 60%;
+    /* display: block; */
+    /* margin-left: 35%; */
+    /* margin-right: 50%; */
+    /* margin-top: 6%; */
+    margin: 5% auto;
+    transition: all 1s ease;
+
+}
+
+.card-img:hover{
+    transform: scale(1.1);
+}
+
+/* .card .cards{
+    height: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10%;
+
+} */
+
+.card-deck .card {
+    margin-right: 5%;
+    margin-bottom: 3%;
+    margin-left: 10%;
+    height: 0%;
+}
+
+.card-deck{
+    margin-right: 0;
+}
+
+.card-title{
+    text-align: center;
+    color: purple;
+    font-size: x-large;
+    font-family: 'Baloo Tamma 2', cursive;
+    margin-top: -10%;
+    transition: all 1s ease;
+
+    
+}
+
+.card-text{
+    text-align: center;
+    font-size: medium;
+    font-size: large;
+    font-family: 'Baloo Tamma 2', cursive;
+    transition: all 1s ease;
+
+}
+
+.card-text1{
+    text-align: center;
+    color: purple;
+    font-size: large;
+    font-family: 'Baloo Tamma 2', cursive;
+    margin-top: -2%;
+    transition: all 1s ease;
+
+
+}
+
+.card-deck.cards1{
+    /* margin-left: 10%; */
+}
+
+/* .card-deck .card{
+    margin-left: 15%;
+    margin-bottom: 3%;
+} */
+
+.card-title .card-text .card-text1:hover{
+    transform: scale(1.1);
+}

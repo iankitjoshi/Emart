@@ -5,6 +5,8 @@ import { Provider } from 'react-redux'
 import App from './App';
 import configureStore from './store/configureStore';
 
+
+
 const store = configureStore()
 store.subscribe(() => {
     console.log('In the Index.js' , store.getState())
