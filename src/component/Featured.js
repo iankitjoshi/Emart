@@ -16,7 +16,7 @@ class Featured extends React.Component{
 
             <div className="feature-div">
                 .
-                <h4 className="h4-div">Featured Products</h4>
+                <h4 className="h4-div">Featured Products..</h4>
                 <br/>
                 <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@600&display=swap" rel="stylesheet" />
                 <div class="card-deck">
@@ -49,6 +49,7 @@ class Featured extends React.Component{
                     </div>
 
                 </div>
+                <br/><br/>
             </div>
            
         )

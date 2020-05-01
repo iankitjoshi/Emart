@@ -12,6 +12,8 @@ import LModal from './component/LModal';
 import RModal from './component/RModal';
 import Collection from './component/Collection';
 import Featured from './component/Featured'
+import BigSale from './component/Bigsale';
+import Navigation from './component/Navigation';
 
 function App() {
   return (
@@ -30,6 +32,10 @@ function App() {
         <Collection />
 
         <Featured />
+
+        <BigSale />
+
+        <Navigation />
 
       </BrowserRouter>
     </div>

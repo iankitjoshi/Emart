@@ -18,6 +18,20 @@ class LModal extends React.Component{
             conpassword : ''
         }
     }
+
+    handlSubmit = () => {
+        const formData = {
+            name : this.state.name,
+            email : this.state.email,
+            mobile : this.state.mobile,
+            password : this.state.password,
+            conpassword : this.state.conpassword
+        }
+
+        this.setState({formData})
+    }
+
+
     handleModal = () => {
         this.setState({show:!this.state.show})
     }
@@ -47,7 +61,7 @@ class LModal extends React.Component{
                             <img className="logo-img-r" src={img} />
                         </div>
                      
-                        <form className="col" >
+                        <form className="col" onSubmit={this.handlSubmit}>
 
 
                             <TextField type="text"   value={this.state.name} onChange={this.handleChange} id={this.state.name} name="name" label=" Name" /><br /><br />
