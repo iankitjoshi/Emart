@@ -1,7 +1,7 @@
 import React from 'react'
-import '../CSS/Emart.css'
+import '../../CSS/Emart.css'
 
-const img = require('../IMG/shopping.jpg')
+const img = require('../../IMG/shopping.jpg')
 
 class BigSale extends React.Component{
     constructor(){

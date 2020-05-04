@@ -1,8 +1,10 @@
 import React from 'react'
+import '../../CSS/Emart.css'
 
-const img = require('../IMG/men.jpg')
-const img1 = require('../IMG/women1.jpg')
-const img2 = require('../IMG/kids1.jpg')
+
+const img = require('../../IMG/men.jpg')
+const img1 = require('../../IMG/women1.jpg')
+const img2 = require('../../IMG/kids1.jpg')
 
 class Collection extends React.Component{
     constructor(){

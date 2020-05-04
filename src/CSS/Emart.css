@@ -59,7 +59,7 @@
 .menus{
     color: black;
     /* font-family: 'Times New Roman', Times, serif; */
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
 
 }
 
@@ -346,6 +346,12 @@
     margin-bottom: 3%;
 } */
 
+.card-deck {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+
 .card-title .card-text .card-text1:hover{
     transform: scale(1.1);
 }
@@ -446,7 +452,7 @@
     border-radius: 0px;
     border-color: rgb(88, 25, 146);
     margin-left: 75%;
-    margin-top: -30.5%;
+    margin-top: -31%;
     height: 10.4%;
     
 }
@@ -455,5 +461,89 @@
     padding-top: 2px;
 }
 
-/* ///////////////////////////////////// */
+/* //////////////// /   About Page   //////////////////// */
 
+.h6-about-nav{
+    margin-left: 7%;
+}
+
+.home-text{
+    color: rgb(187, 17, 202);
+}
+
+.nav-div{
+    margin-top: 1.6%;
+}
+
+.navbar{
+    padding: 0.7rem 1rem;
+}
+
+.howstart-div{
+    margin-top: 8%;
+}
+
+.h3-we-start{
+    margin-top: -18%;
+    text-align: left;
+    margin-bottom: 5%;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.p-we-start{
+    /* margin-top: 5%; */
+    text-align: justify;
+    color: rgb(82, 78, 78);
+
+}
+
+.how-we-img {
+    height: 98%;
+    width: 115%;
+    margin-left: 35%;
+    border: 1px solid black;
+}
+
+.h1__- {
+    color: purple;
+    margin-left: 54%;
+    margin-top: -5%;
+}
+
+.h1__team{
+    text-align: center ;
+    color: purple;
+}
+
+.h2-team{
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.team-img {
+    width: 57%;
+    border-radius: 50%;
+    height: 43%;
+    margin-left: 22%;
+    border: 1px solid white;
+}
+
+.h6-name{
+    text-align: center;
+    margin-top: 2%;
+    color: gray;
+}
+
+.h5-name{
+    text-align: center;
+    margin-top: 8%;
+    font-family: 'Baloo 2', cursive;
+
+}
+
+.p-name{
+    text-align: center;
+    margin-top: 6%;
+    color: rgb(82, 78, 78);
+}

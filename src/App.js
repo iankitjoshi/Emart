@@ -1,41 +1,21 @@
 import React from 'react';
-import { BrowserRouter  } from 'react-router-dom'
+import { BrowserRouter, Route  } from 'react-router-dom'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import FullHome from './component/Home/FullHome';
+import About from './component/About/About';
+import Shop from './component/Shop/Shop';
 
-import Emart from './component/Emart'
-import Menu from './component/MenuBar';
-import Slider from './component/Slider';
-import Shipping from './component/Shipping';
-import LModal from './component/LModal';
-import RModal from './component/RModal';
-import Collection from './component/Collection';
-import Featured from './component/Featured'
-import BigSale from './component/Bigsale';
-import Navigation from './component/Navigation';
 
 function App() {
   return (
     <div>
       <BrowserRouter>
 
-        {/* <Link to="/">Home </Link>
-        <Link to="/contact">Contact</Link> */}
-
-        <Emart />
-        <Menu />
-        <Slider />
-        <Shipping />
-        {/* <LModal />
-        <RModal /> */}
-        <Collection />
-
-        <Featured />
-
-        <BigSale />
-
-        <Navigation />
+        <Route path="/" component={FullHome}  exact={true} />
+        <Route path="/about" component={About} />
+        <Route path="/shop" component={Shop} />
 
       </BrowserRouter>
     </div>

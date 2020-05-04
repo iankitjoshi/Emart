@@ -1,8 +1,8 @@
 import React from 'react'
 import { Button , Modal} from 'react-bootstrap';
 import TextField from '@material-ui/core/TextField';
-import '../CSS/Emart.css'
-const img = require('../IMG/logo.png')
+import '../../CSS/Emart.css'
+const img = require('../../IMG/logo.png')
 
 
 

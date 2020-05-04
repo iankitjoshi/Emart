@@ -1,10 +1,9 @@
 import React from 'react'
-import '../CSS/Emart.css'
+import '../../CSS/Emart.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  faUser, faHeart , faShoppingCart ,faSearch } from '@fortawesome/free-solid-svg-icons'
-import { Button , Modal} from 'react-bootstrap';
-import LModal from '../component/LModal'
-import RModal from '../component/RModal'
+import LModal from './LModal'
+import RModal from './RModal'
 
 
 class Emart extends React.Component{

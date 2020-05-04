@@ -1,7 +1,7 @@
 import React from 'react'
-const img = require('../IMG/tshirt1.jpg')
-const img1 = require('../IMG/shoes.jpg')
-const img2 = require('../IMG/shoes.jpg')
+const img = require('../../IMG/tshirt1.jpg')
+const img1 = require('../../IMG/shoes.jpg')
+const img2 = require('../../IMG/shoes.jpg')
 
 class Featured extends React.Component{
     constructor(){
@@ -16,6 +16,7 @@ class Featured extends React.Component{
 
             <div className="feature-div">
                 .
+                
                 <h4 className="h4-div">Featured Products..</h4>
                 <br/>
                 <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@600&display=swap" rel="stylesheet" />
