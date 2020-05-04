@@ -16,7 +16,7 @@ function Shop(){
 
             <Nav />
 
-            <ShopAll />
+            {/* <ShopAll /> */}
             
             <hr />
             <h4 style={{textAlign:'center'}}>Categroies</h4>
