@@ -295,16 +295,26 @@
 
 } */
 
+/* .card-deck .card {
+    margin-right: 3%;
+    margin-bottom: 0;
+    margin-left: 0;
+    height: 1%;
+} */
+
 .card-deck .card {
-    margin-right: 5%;
+    /* margin-right: 5%;
     margin-bottom: 3%;
     margin-left: 10%;
-    height: 0%;
+    height: 0%; */
+    margin: 2%;
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.45);
+
 }
 
-.card-deck{
+/* .card-deck{
     margin-right: 0;
-}
+} */
 
 .card-title{
     text-align: center;
@@ -347,10 +357,22 @@
 } */
 
 .card-deck {
-    margin-right: 10%;
-    margin-left: 10%;
+    margin-right: 22%;
+    margin-left: 23%;
+
 }
 
+.cards-cards{
+    margin-right: 22%;
+}
+
+.cards-cards1{
+
+}
+
+.cards-cards{
+
+}
 
 .card-title .card-text .card-text1:hover{
     transform: scale(1.1);
@@ -546,4 +568,196 @@
     text-align: center;
     margin-top: 6%;
     color: rgb(82, 78, 78);
+}
+
+.shopAll-img{
+    height: 3%;
+    width: 3%;
+}
+
+/* //////////////// Shop All //////////// */
+
+.range{
+    width: 10%;
+    margin-left: 2%;
+}
+
+.Categories-div{
+    
+}
+
+/* /////////////////// Shop Alls /////////// */
+
+.cate-div{
+    border: 1px solid black;
+    margin-right: 11%;
+    margin-left: 11%;
+    margin-top: 2%;
+}
+
+.cate-name-h6{
+    font-weight: 630;
+    margin: 6%;
+    margin-bottom: 9%;
+}
+
+.cate-name{
+    font-weight: 500;
+    margin-left: 7%;
+    color: rgb(62, 71, 158);
+}
+
+.cat-span1{
+    margin-left: 63%;
+}
+
+.cat-span2{
+    margin-left: 54%;
+}
+
+.cat-span3{
+    margin-left: 53%;
+}
+
+.checkbox{
+    margin-left: -1%;
+}
+
+.checkbox-name{
+    margin-left: 8%;
+}
+
+.dot-red{
+    margin-left: 7%;
+    height: 13px;
+    width: 13px;
+    background-color: #ad1818;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 2%;
+
+}
+
+.dot-green{
+    margin-left: 7%;
+    height: 13px;
+    width: 13px;
+    background-color: rgb(11, 114, 11);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 2%;
+}
+
+.dot-blue{
+    margin-left: 7%;
+    height: 13px;
+    width: 13px;
+    background-color: rgb(29, 130, 170);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 2%;
+
+}
+
+.dot-purple{
+    margin-left: 7%;
+    height: 13px;
+    width: 13px;
+    background-color: rgb(105, 12, 105);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 2%;
+
+}
+
+.slider{
+    width: 50%;
+}
+
+.MuiSlider-root{
+    width: 80%;
+}
+
+.MuiSlider-root .MuiSlider-colorPrimary .slider{
+    width: 80%;
+}
+
+.shopAllss-div{
+    /* margin-top: -90%; */
+}
+
+.cate-col{
+    margin-left: -7%;
+}
+
+.latest-btn{
+    background-color: rgb(216, 211, 211);
+    border: none;
+    width: 18%;
+    border-radius: 2px;
+    font-weight: 500;
+    margin-left: 56%;
+    padding: 9px 13px;
+}
+
+.ref-btn{
+    background-color: rgb(228, 222, 222);
+    border: none;
+    width: 18%;
+    border-radius: 2px;
+    font-weight: 500;
+    margin-left: 2%;
+}
+
+.col-8{
+    /* border: 1px solid black; */
+    margin-top: .5%;
+}
+
+.shopall-h5{
+    margin-left: -6%;
+    margin-top: 2%;
+}
+
+/* //////////// Cards //////////////// */
+
+.card-main{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.card-cards{
+    margin-left: 0;
+    margin-right: 0;
+    /* border: 1px solid black; */
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.45);
+    border-radius: 0px;
+}
+
+.card-deck .card {
+    margin-right: 3%;
+    margin-bottom: 0;
+    margin-left: 0;
+    height: 1%;
+}
+
+.card-img{
+    height: 50%;
+    margin-bottom: 10%;
+}
+
+.card-h5{
+    margin-top: -5px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.card-p{
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+.card-p1{
+    margin-top: -4%;
+    font-family: 'Source Sans Pro', sans-serif;
+
 }

@@ -22,8 +22,8 @@ class Featured extends React.Component{
                 <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@600&display=swap" rel="stylesheet" />
                 <div class="card-deck">
                     
-                    <div className="cards  card">
-                        <img src={img} className="card-img  card-img-top" alt="..." /><hr/>
+                    <div className="cards-cards  card">
+                        <img src={img1} className="card-img  card-img-top" alt="..." /><hr/>
                         <div class="card-body">
                             <h5 className="card-title">T-Shirt</h5>
                             <p className="card-text">Well Fit T-Shirt.</p>
@@ -31,7 +31,7 @@ class Featured extends React.Component{
                         </div>
                     </div>
 
-                    <div className="cards  card">
+                    <div className="cards-cards1  card">
                         <img src={img1} className="card-img  card-img-top" alt="..." /><hr/>
                         <div class="card-body">
                             <h5 className="card-title">T-Shirt</h5>
@@ -40,7 +40,7 @@ class Featured extends React.Component{
                         </div>
                     </div>
                     
-                    <div className="cards card">
+                    <div className="cards-cards2 card">
                         <img src={img2} className="card-img  card-img-top" alt="..." /><hr/>
                         <div class="card-body">
                             <h5 className="card-title">T-Shirt</h5>

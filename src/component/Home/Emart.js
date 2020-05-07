@@ -32,7 +32,7 @@ class Emart extends React.Component{
                         <input type="text" className="search-control" placeholder="  Search"  id="search" onChange={this.handleChange}/>
                     </label>
                 </form>
-                    <button type="button" className="emart  btn btn-outline-dark ">E-MART</button>
+                    <button type="button" href="/" className="emart  btn btn-outline-dark ">E-MART</button>
                     <div className="dropdown">
                         <FontAwesomeIcon className="icon-user dropdown dropbtn" icon={faUser} />
                         <div className="dropdown-content">
