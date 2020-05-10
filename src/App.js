@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import FullHome from './component/Home/FullHome';
 import About from './component/About/About';
 import Shop from './component/Shop/Shop';
+import Cart from './component/Cart/cart';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" component={FullHome}  exact={true} />
         <Route path="/about" component={About} />
         <Route path="/shop" component={Shop} />
+        <Route path="/cart" component={Cart} />
 
       </BrowserRouter>
     </div>

@@ -759,5 +759,125 @@
 .card-p1{
     margin-top: -4%;
     font-family: 'Source Sans Pro', sans-serif;
+}
 
+/* ////////////// CART //////////// */
+
+.cart-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 15%;
+}
+
+.update-btn{
+    background-color: 	rgb(121, 113, 234);
+    width: 45%;
+    height: 22%;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-family: 'Major-Mono-Display', monospace;
+    margin-right: 2%;
+}
+
+.continue-btn{
+    background-color: white;
+    width: 47%;
+    height: 22%;
+    color:  	rgb(120, 113, 230);
+    border:  1px solid  	rgb(121, 113, 234);
+    border-radius: 3px;
+    font-family: 'Major-Mono-Display', monospace;
+}
+
+.apply-btn{
+    background-color: 	rgb(121, 113, 234);
+    width: 120%;
+    /* height: 29%; */
+    color: white;
+    border: none;
+    border-radius: 0px;
+    font-family: 'Major-Mono-Display', monospace;
+    /* margin-right: 2%; */
+    margin-left: -15%;
+    /* margin-top: -50%; */
+}
+
+.checkout-btn{
+    background-color: 	rgb(121, 113, 234);
+    width: 75%;
+    height: 23%;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-family: 'Major-Mono-Display', monospace;
+    margin-left: 2%;    
+}
+
+.input{
+    margin-right: 6%;
+}
+
+.enter-coupon{
+    margin-top: 5%;
+    color: gray;
+}
+
+.span1-price{
+    margin-left: 36%;
+}
+
+.span-price{
+    margin-left: 43%;
+}
+
+.total{
+    font-family: 'Jaldi', sans-serif;
+    font-size: large;
+    margin-left: 4%;
+}
+
+.cart-total{
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.quantity-btn1{
+    background-color:  rgb(232, 232, 245);
+    color: rgb(121, 113, 234);
+    border: 1px solid rgb(121, 113, 234);
+}
+
+.quantity{
+    background-color: white;
+    color: rgb(121, 113, 234);
+    border: 1px solid rgb(121, 113, 234);
+}
+
+.remove-btn{
+    background-color: 	rgb(121, 113, 234);
+    border: none;
+    width: 30%;
+    height: 23%;
+    border-radius: 3px;
+    color: white;
+    font-size: small;
+    font-family: 'Major-Mono-Display', monospace;
+
+}
+
+.table{
+    margin-left: 12%;
+    width: 75%;
+}
+
+.table td{
+    vertical-align: middle;
+}
+
+.td-0 , .td-1 , .td-2, .td-3, .td-4, .td-5, .td-6{
+    width: 15%;
+    font-family: 'Roboto Mono', 'monospace'
 }

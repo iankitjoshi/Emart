@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link } from 'react-router-dom'
 import '../../CSS/Emart.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  faUser, faHeart , faShoppingCart ,faSearch } from '@fortawesome/free-solid-svg-icons'
@@ -32,17 +33,19 @@ class Emart extends React.Component{
                         <input type="text" className="search-control" placeholder="  Search"  id="search" onChange={this.handleChange}/>
                     </label>
                 </form>
-                    <button type="button" href="/" className="emart  btn btn-outline-dark ">E-MART</button>
+                 <button type="button" href="/" className="emart  btn btn-outline-dark ">E-MART</button>
                     <div className="dropdown">
-                        <FontAwesomeIcon className="icon-user dropdown dropbtn" icon={faUser} />
+                       <FontAwesomeIcon  className="icon-user dropdown dropbtn" icon={faUser} /> 
                         <div className="dropdown-content">
                         <LModal/>
                         <RModal/>
                             
                         </div>
                     </div>
-                    <FontAwesomeIcon icon={faHeart} />
+                    <FontAwesomeIcon  icon={faHeart} />
+                    
                     <FontAwesomeIcon className="icon" icon={faShoppingCart} />
+                    
 
             </nav>
             <br />
