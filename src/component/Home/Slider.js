@@ -5,8 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 
 import '../../CSS/Emart.css'
 
-const img1 = require('../../IMG/shoes.png')
-const img2 = require('../../IMG/shoes11.jpg')
+const img1 = require('../../Public/Assets/IMG/shoes.png')
+const img2 = require('../../Public/Assets/IMG/shoes11.jpg')
 
 function SampleNextArrow(props){
     const {className , style, onClick} = props

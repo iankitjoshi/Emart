@@ -4,6 +4,7 @@ import '../../CSS/Emart.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  faTruck , faUndoAlt , faQuestionCircle} from '@fortawesome/free-solid-svg-icons'
 
+
 function Shipping(){
     return(
         <div className="shipping-div">

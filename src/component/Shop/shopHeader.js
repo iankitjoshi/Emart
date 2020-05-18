@@ -1,7 +1,7 @@
 import React from 'react'
 import Cards from './card'
 
-class ShopAllss extends React.Component{
+class ShopHeader extends React.Component{
     constructor(){
         super()
         this.state = {
@@ -29,4 +29,4 @@ class ShopAllss extends React.Component{
     }
 }
 
-export default ShopAllss
+export default ShopHeader

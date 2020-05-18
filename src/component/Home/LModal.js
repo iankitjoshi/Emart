@@ -4,7 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import '../../CSS/Emart.css'
 import RModal from './RModal'
 
-const img = require('../../IMG/logo.png');
+const img = require('../../Public/Assets/IMG/logo.png');
 
 
 class LModal extends React.Component{

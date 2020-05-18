@@ -1,12 +1,11 @@
 import React from 'react'
-import Emart from '../Home/Emart'
+import Emart from '../Home/header'
 import Nav from './Nav'
 import Menu from '../Home/MenuBar'
-import Navigation from '../Home/Navigation'
+import Navigation from '../Home/footer'
 import Collection from '../Home/Collection'
-import ShopAll from './ShopAll'
 import ShopAlls from './ShopAlls'
-import ShopAllss from './shopAllss'
+import ShopAllss from './shopHeader'
 
 
 function Shop(){
@@ -19,7 +18,6 @@ function Shop(){
 
             <Nav />
 
-            {/* <ShopAll /> */}
 
             <ShopAlls />
             

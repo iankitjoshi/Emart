@@ -14,7 +14,6 @@ function Menu(){
             <Link to="/cart" className="menus">CATALOGUE</Link>
             <Link to="/new" className="menus">NEW ARRIVALS</Link>
             <Link to="/contact" className="menus">CONTACT</Link>
-
             </nav>
         </div>
     )

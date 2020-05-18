@@ -1,5 +1,5 @@
 import React from 'react'
-const img1 = require('../../IMG/tshirt.jpg')
+const img1 = require('../../Public/Assets/IMG/tshirt.jpg')
 
 class Table extends React.Component{
     constructor(){
@@ -27,6 +27,7 @@ class Table extends React.Component{
                     price : 350,
                     quantity : 3
                 },
+                
             ],
             
         }
@@ -79,7 +80,7 @@ class Table extends React.Component{
             <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet" />
 
                 <br /><br /><br />
-                <table style={{textAlign:'center'}} className="table table-bordered">
+                <table style={{textAlign:'center' , marginBottom:'9%'}} className="table table-bordered">
                     <thead>
                         <tr>
                             <th scope="col">Image</th>
@@ -118,17 +119,15 @@ class Table extends React.Component{
                     }
                    
                     </table>
-                    <br /><br /><br /><br />
 
                     <div class="container">
                         <div class="row">
 
-                                <div class="col-5">
+                                <div style={{marginLeft:"2%"}} class="col-5">
 
                                     <button className="update-btn" >UPDATE CART</button>
                                     <button className="continue-btn" >CONTINUE SHOPING</button>
-                                    <br /><br /><br /><br />
-                                    <h4  style={{marginBottom:"6%" , fontFamily: "'Roboto Mono', 'monospace'"}}>Coupon</h4>
+                                    <h4  style={{marginBottom:"6%" , marginTop:'16.5%' , fontFamily: "'Roboto Mono', 'monospace'"}}>Coupon</h4>
                                     <span className="enter-coupon">Enter your coupon code if you have one</span><br />
                                     <div style={{marginTop:"2.5%"}} class="input-group mb-3">
                                             <input type="text" className="input  form-control" placeholder="Enter Your Coupon Code" aria-label="Recipient's username" aria-describedby="button-addon2" />
@@ -141,18 +140,17 @@ class Table extends React.Component{
 
                                 </div>
 
-                                <div class="col-3">
+                                {/* <div class="col-3">
 
-                                </div>
+                                </div> */}
 
-                                <div class="col-4">
+                                <div className="checkout  col-4">
                                     <h4 className="cart-total" >CART TOTALS</h4>
                                     <hr style={{marginRight:'25%'}} />
                                     <br />
                                     <p className="total">Subtotal  <span className="span1-price">{this.state.products.reduce((a,b) => (a+b.price * b.quantity),0 )}  INR </span>  </p>
                                     <p className="total"> Total  <span className="span-price" > {this.state.products.reduce((a,b) => (a+b.price * b.quantity),0 )}  INR </span> </p><br />
                                     <button className="checkout-btn" >PROCEED TO CHECKOUT</button>
-
                                 </div>
                             
                         </div>

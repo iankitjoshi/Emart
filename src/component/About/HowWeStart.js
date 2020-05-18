@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../CSS/Emart.css'
 
-const img = require('../../IMG/shopping.jpg')
+const img = require('../../Public/Assets/IMG/shopping.jpg')
 
 class HowStart extends React.Component{
     constructor(){
@@ -17,7 +17,7 @@ class HowStart extends React.Component{
 
             <h1 className="h1__-">___</h1>
                 <br/>
-                        <div class="row row-cols-2">
+                        <div className="bigsale  row row-cols-2">
                             <div class="col">
                                 <img src={img} className="how-we-img" />
                             </div>
@@ -30,7 +30,6 @@ class HowStart extends React.Component{
                                 {/* <button type="button" class="shop-now  btn btn-primary">Shop Now</button> */}
                             </div>
                         </div>
-                        <br/><br/><br/>
                     <hr/>
             </div>
         )

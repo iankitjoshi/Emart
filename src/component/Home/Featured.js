@@ -1,7 +1,7 @@
 import React from 'react'
-const img = require('../../IMG/tshirt1.jpg')
-const img1 = require('../../IMG/shoes.jpg')
-const img2 = require('../../IMG/shoes.jpg')
+const img = require('../../Public/Assets/IMG/tshirt1.jpg')
+const img1 = require('../../Public/Assets/IMG/shoes.jpg')
+const img2 = require('../../Public/Assets/IMG/shoes.jpg')
 
 class Featured extends React.Component{
     constructor(){

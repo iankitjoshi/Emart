@@ -3,7 +3,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  faMapMarkerAlt , faPhoneAlt , faEnvelope} from '@fortawesome/free-solid-svg-icons'
 
-const img = require('../../IMG/shoes11.jpg')
+const img = require('../../Public/Assets/IMG/shoes11.jpg')
 
 class Navigation extends React.Component{
     constructor(){

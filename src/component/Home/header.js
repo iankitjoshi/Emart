@@ -39,13 +39,12 @@ class Emart extends React.Component{
                         <div className="dropdown-content">
                         <LModal/>
                         <RModal/>
-                            
+
                         </div>
                     </div>
                     <FontAwesomeIcon  icon={faHeart} />
-                    
+
                     <FontAwesomeIcon className="icon" icon={faShoppingCart} />
-                    
 
             </nav>
             <br />

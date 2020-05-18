@@ -1,7 +1,6 @@
 import React from 'react'
 import RangeSlider from './Slider'
-import ShopAllss from './shopAllss'
-import ShopAll from './ShopAll'
+import ShopHeader from './shopHeader'
 import Featured from '../Home/Featured'
 import Cards from './card'
 
@@ -14,8 +13,8 @@ class ShopAlls extends React.Component{
     }
     render(){
         return(
-            <div>
-                <br /><br /><br />
+            <div style={{marginTop:'10%'}}>
+                {/* <br /><br /><br /> */}
                 <div class="container">
                     <div class="row">
                         <div className="cate-col  col-4">
@@ -62,9 +61,8 @@ class ShopAlls extends React.Component{
 
                         <div class="col-8">
 
-                            <ShopAllss />
+                            <ShopHeader />
 
-                            {/* <ShopAll /> */}
 
                             {/* <Cards /> */}
 

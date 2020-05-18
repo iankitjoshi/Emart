@@ -1,8 +1,8 @@
 import React from 'react'
-import Emart from '../Home/Emart'
+import Emart from '../Home/header'
 import CNav from './CartNav'
 import MenuBar from '../Home/MenuBar'
-import Navigation from '../Home/Navigation'
+import Navigation from '../Home/footer'
 import Table from './table'
 
 function Cart(){
