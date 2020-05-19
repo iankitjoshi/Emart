@@ -18,21 +18,21 @@ class Navigation extends React.Component{
                 <div class="container">
                     <div class="row row-cols-5">
                         <div class="col">
-                            <h5 className="navigation-h5">Navigation</h5>
-                            <p className="p-1-nav">Sell Online</p>
-                            <p>Features</p>
-                            <p>Shopping Cart</p>
-                            <p>Store Builder</p>
+                            <h5 className=" navigation-h5">Navigation</h5>
+                            <p className="nav-p  p-1-nav">Sell Online</p>
+                            <p className="nav-p"  >Features</p>
+                            <p className="nav-p" >Shopping Cart</p>
+                            <p className="nav-p" >Store Builder</p>
                         </div>
                         <div class="col">
-                            <p className="p-2-nav" >Mobile Commerce</p>
-                            <p >DropShipping</p>
-                            <p>Website Development</p>
+                            <p className="nav-p  p-2-nav" >Mobile Commerce</p>
+                            <p className="nav-p" >DropShipping</p>
+                            <p className="nav-p" >Website Development</p>
                         </div>
                         <div class="col">
-                            <p className="p-2-nav">Point of Sale</p>
-                            <p>Hardware</p>
-                            <p>Software</p>
+                            <p className="nav-p   p-2-nav">Point of Sale</p>
+                            <p className="nav-p" >Hardware</p>
+                            <p className="nav-p" >Software</p>
                         </div>
                         <div class="col">
                             <h5 className="navigation-h5">Promo</h5>
