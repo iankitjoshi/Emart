@@ -127,7 +127,7 @@ class Table extends React.Component{
 
                                     <button className="update-btn" >UPDATE CART</button>
                                     <button className="continue-btn" >CONTINUE SHOPING</button>
-                                    <h4  style={{marginBottom:"6%" , marginTop:'16.5%' , fontFamily: "'Roboto Mono', 'monospace'"}}>Coupon</h4>
+                                    <h4  style={{marginBottom:"6%" , marginTop:'16.5%' , fontFamily: "'Roboto Mono', 'monospace'",fontSize:'1.7vw'}}>Coupon</h4>
                                     <span className="enter-coupon">Enter your coupon code if you have one</span><br />
                                     <div style={{marginTop:"2.5%"}} class="input-group mb-3">
                                             <input type="text" className="input  form-control" placeholder="Enter Your Coupon Code" aria-label="Recipient's username" aria-describedby="button-addon2" />

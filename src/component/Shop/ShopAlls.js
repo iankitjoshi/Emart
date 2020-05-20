@@ -50,10 +50,10 @@ class ShopAlls extends React.Component{
                                         <br/>
 
                                     <h6 className="cate-name-h6">COLOR</h6>
-                                        <p><span className="dot-red" /> Red (765) </p>
-                                        <p><span className="dot-green" /> Green (456) </p>
-                                        <p><span className="dot-blue" /> Blue (453) </p>
-                                        <p><span className="dot-purple" /> Purple (478) </p>
+                                        <p className="cat-color"><span className="dot-red" /> Red (765) </p>
+                                        <p className="cat-color"><span className="dot-green" /> Green (456) </p>
+                                        <p className="cat-color"><span className="dot-blue" /> Blue (453) </p>
+                                        <p className="cat-color"><span className="dot-purple" /> Purple (478) </p>
 
                             </div>
 

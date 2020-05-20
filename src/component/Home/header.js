@@ -30,7 +30,7 @@ class Emart extends React.Component{
                 <form class="form-inline">
                     <label htmlFor="search">
                     <FontAwesomeIcon icon={faSearch} className="search-btn"   />
-                        <input type="text" className="search-control" placeholder="  Search"  id="search" onChange={this.handleChange}/>
+                        <input type="text" className="search-control  form-control " placeholder="  Search"  id="search" onChange={this.handleChange}/>
                     </label>
                 </form>
                  <button type="button" href="/" className="emart  btn btn-outline-dark ">E-MART</button>

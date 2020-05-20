@@ -46,7 +46,7 @@ class Navigation extends React.Component{
                             <FontAwesomeIcon icon={faPhoneAlt} className="contact-icon" /> <p className="contact-info">+2 392 3929 210</p>
                             <FontAwesomeIcon icon={faEnvelope} className="contact-icon" /> <p className="contact-info">emailadress@domain.com</p>
                             <h6>Subscribe</h6>
-                            <input>
+                            <input class="form-control" >
                             </input><button type="button" class="send  btn btn-primary">Send</button>
 
                         </div>
