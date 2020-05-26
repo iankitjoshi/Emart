@@ -2,7 +2,12 @@ import React from 'react'
 import { Button , Modal} from 'react-bootstrap';
 import TextField from '@material-ui/core/TextField';
 import '../../CSS/Emart.css'
-const img = require('../../Public/Assets/IMG/logo.png')
+import axios from '../../config/axios.js'
+import EmailValidator from 'email-validator';
+import Swal from 'sweetalert2'
+
+
+const img = require('../../Public/Assets/IMG/logo.png');
 
 
 
@@ -11,24 +16,52 @@ class LModal extends React.Component{
         super()
         this.state = {
             show: false,
-            name: '',
+            firstName: '',
+            lastName:'',
             email : '',
-            mobile : '',
+            phone : '',
             password : '',
-            conpassword : ''
+            // conpassword : ''
         }
     }
 
-    handlSubmit = () => {
+    handlSubmit = (e) => {
+        e.preventDefault()
         const formData = {
-            name : this.state.name,
+            firstName : this.state.firstName,
+            lastName : this.state.lastName,
             email : this.state.email,
-            mobile : this.state.mobile,
+            phone : this.state.phone,
             password : this.state.password,
-            conpassword : this.state.conpassword
+            // conpassword : this.state.conpassword
         }
 
         this.setState({formData})
+        console.log('formData',formData)
+
+
+        if(EmailValidator.validate(this.state.email) == true){
+            axios.post('/users/signup',formData)
+            .then((response) => {
+                console.log(response,'response')
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Register Successfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+            })
+            .catch((err) => {
+                alert(err)
+            })
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Please Enter Valid Email-Id'
+                })
+        }
+
+
     }
 
 
@@ -40,6 +73,7 @@ class LModal extends React.Component{
         this.setState({
             [e.target.name] : e.target.value
         })
+        console.log(e.target.value,'e.target.value')
     }
     render(){
         return(
@@ -64,15 +98,17 @@ class LModal extends React.Component{
                         <form className="col" onSubmit={this.handlSubmit}>
 
 
-                            <TextField type="text"   value={this.state.name} onChange={this.handleChange} id={this.state.name} name="name" label=" Name" /><br /><br />
+                            <TextField type="text"   value={this.state.firstName} onChange={this.handleChange} id={this.state.firstName} name="firstName" label=" First Name" /><br /><br />
+
+                            <TextField type="text"   value={this.state.lastName} onChange={this.handleChange} id={this.state.lastName} name="lastName" label=" Last Name" /><br /><br />
 
                             <TextField type="text"   value={this.state.email} onChange={this.handleChange} id={this.state.email} name="email" label=" Email" /><br /><br />
                             
-                            <TextField type="text"   value={this.state.mobile} onChange={this.handleChange} id={this.state.mobile} name="mobile" label=" Mobile" /><br /><br />
+                            <TextField type="text"   value={this.state.phone} onChange={this.handleChange} id={this.state.phone} name="phone" label=" Mobile" /><br /><br />
                             
                             <TextField type="text"   value={this.state.password} onChange={this.handleChange} id={this.state.password} name="password" label=" Password" /><br /><br />
 
-                            <TextField type="text"   value={this.state.conpassword} onChange={this.handleChange} id={this.state.conpassword} name="conpassword" label="Confirm Password" /><br /><br />
+                            {/* <TextField type="text"   value={this.state.conpassword} onChange={this.handleChange} id={this.state.conpassword} name="conpassword" label="Confirm Password" /><br /><br /> */}
 
                             <input className="submit-button  btn btn-info" type="submit" />
 

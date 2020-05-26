@@ -21,8 +21,8 @@ class ShopHeader extends React.Component{
                     </div>
                 </div>
                 <Cards />
-                <Cards />
-                <Cards />
+                {/* <Cards />
+                <Cards /> */}
                 
             </div>
         )
