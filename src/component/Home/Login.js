@@ -15,7 +15,7 @@ class LModal extends React.Component{
     constructor(){
         super()
         this.state = {
-            show: false,
+            show: true,
             email : '',
             password : ''
         }
@@ -115,9 +115,8 @@ class LModal extends React.Component{
         return(
             <div>
             
-            <button type="button" className="drop-btn btn btn-outline-secondary"  onClick={this.handleModal}>Login</button>
+            <span type="button" className="drop-btn btn btn-outline-secondary"  onClick={this.handleModal}>Login</span>
 
-                
                 <Modal
                 show={this.state.show}
                 onHide={()=> this.handleModal()}

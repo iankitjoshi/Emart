@@ -44,7 +44,7 @@ class Cards extends React.Component{
                                             <img src={product.asset.url} className="card-img   card-img-top" alt="..." /> <hr/>
                                             <div className="card  card-body">
                                                 <Link to={`/products/${product.id}`}> <h6 className="card-h5  card-title">{product.name}</h6></Link>
-                                                <p className="card-p  card-text">{product.description}</p>
+                                                {/* <p className="card-p  card-text">{product.description}</p> */}
                                                 <p className="card-p1  card-text">{product.price} RS</p>
                                             </div>
                                             </div>

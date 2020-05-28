@@ -9,6 +9,7 @@ import Shop from './component/Shop/Shop';
 import Cart from './component/Cart/cart';
 import LModal from './component/Home/LModal';
 import ProductShow from './component/Shop/productShow'
+import Login from './component/Home/Login';
 
 function App() {
   return (
@@ -20,7 +21,20 @@ function App() {
         <Route path="/about" component={About} />
         <Route path="/shop" component={Shop} />
         <Route path="/cart" component={Cart} />
-        <Route path="/products/:id" component={ProductShow} />
+        {    
+          localStorage.getItem('Authorization') ? (
+              <div>
+                <Route path="/products/:id" component={ProductShow} />
+              </div>
+          ) : (
+              <div>
+                  
+                  <Login/>
+                  
+              </div>
+          )
+         }
+         
 
       </BrowserRouter>
     </div>

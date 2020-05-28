@@ -20,9 +20,9 @@ class Featured extends React.Component{
                 <h4 className="h4-div">Featured Products..</h4>
                 <br/>
                 <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@600&display=swap" rel="stylesheet" />
-                <div class="card-deck">
+                <div class="card-deck1 card-deck">
                     
-                    <div className="cards-cards  card">
+                    <div className="cards-cards  card1  card">
                         <img src={img1} className="card-img  card-img-top" alt="..." /><hr/>
                         <div class="card-body">
                             <h5 className="card-title">T-Shirt</h5>
@@ -31,7 +31,7 @@ class Featured extends React.Component{
                         </div>
                     </div>
 
-                    <div className="cards-cards1  card">
+                    <div className="cards-cards1 card1 card">
                         <img src={img1} className="card-img  card-img-top" alt="..." /><hr/>
                         <div class="card-body">
                             <h5 className="card-title">T-Shirt</h5>
@@ -40,7 +40,7 @@ class Featured extends React.Component{
                         </div>
                     </div>
                     
-                    <div className="cards-cards2 card">
+                    <div className="cards-cards2 card1 card">
                         <img src={img2} className="card-img  card-img-top" alt="..." /><hr/>
                         <div class="card-body">
                             <h5 className="card-title">T-Shirt</h5>

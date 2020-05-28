@@ -20,7 +20,7 @@ class BigSale extends React.Component{
                             <div class="col">
                                 <img src={img} className="bigsale-img" />
                             </div>
-                            <div class="col  col-less">
+                            <div style={{marginTop:'-4px'}} class="col  col-less">
                                 <h3 className="h3-less-in">50% Less in all items</h3>
                                 <p style={{fontSize:'1.1vw'}}>By <span className="car-smith">Car Smith</span> . September 2019</p>
                                 <p style={{fontSize:'1.3vw'}}>This is the Best for you to sopping in this occasion do shopping with any worry and get the attractrive discount. Do Shopping more get the Discount more.</p>

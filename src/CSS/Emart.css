@@ -30,6 +30,14 @@
     margin-left: -18%;
 }
 
+.name-header{
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.4vw;
+    margin-top: 8%;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
 
 /* ///////////////// MenuBar Page ///////////////////// */
 
@@ -179,7 +187,7 @@
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #cecbcb;
+    background-color: #F8F9FA;
     width: 125px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -202,6 +210,7 @@
  .drop-btn{
      border-radius: 0px;
      width: 100%;
+     border: none;
  }
 
  .drop-btn-forgot{
@@ -363,6 +372,8 @@
     margin-left: 15%;
     margin-bottom: 3%;
 } */
+
+
 
 .card-deck {
     margin-right: 22%;
@@ -771,6 +782,13 @@
     margin-top: 2%;
 }
 
+.card-deck1 .card1 {
+    margin-right: 3%;
+    margin-bottom: 15px;
+    margin-left: 0;
+    height: 1%;
+}
+
 /* //////////// Cards //////////////// */
 
 .card-main{
@@ -799,7 +817,7 @@
 }
 
 .card-h5{
-    font-size: 1.8vw;
+    font-size: 1.5vw;
     margin-top: -5px;
     font-family: 'Source Sans Pro', sans-serif;
 }
@@ -945,4 +963,60 @@
 .td-0 , .td-1 , .td-2, .td-3, .td-4, .td-5, .td-6{
     width: 15%;
     font-family: 'Roboto Mono', 'monospace'
+}
+
+/* ////////////// Product Show ////////////// */
+
+.container-div{
+    margin-top: 5%;
+}
+
+.image{
+    width: 75%;
+    height: auto;
+    /* border: .5px solid black */
+}
+
+.price{
+    font-size: 1.6vw;
+    color: #B12704;
+    font-family: 'Rubik', sans-serif;
+}
+
+.name{
+    font-family: 'Rubik', sans-serif;
+    font-size: 2.4vw;
+}
+
+.description{
+    font-family: 'Rubik', sans-serif;
+    color: rgb(39, 37, 37);
+    margin-top: 4%;
+    font-size: 1.28vw;
+}
+
+.rating{
+    font-family: 'Rubik', sans-serif;
+    margin-top: 3%;
+    font-size: 1.2vw;
+
+}
+
+.btn-add2cart{
+    background-color: 	rgb(242, 202, 104);
+    border: #a88734  1px solid;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.2vw;
+    width: 30%;
+
+}
+
+.btn-buynow{
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.2vw;
+    margin-left: 8%;
+    background-color: rgb(240, 169, 81);
+    border: #a88734  1px solid;
+    width: 30%;
+
 }
