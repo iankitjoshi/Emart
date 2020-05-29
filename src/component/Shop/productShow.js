@@ -3,6 +3,11 @@ import axios from '../../config/axios'
 import Emart from '../Home/header'
 import Menu from '../Home/MenuBar'
 import Navigation from '../Home/footer'
+import Swal from 'sweetalert2'
+
+import { addCart  } from '../../action/cart'
+import { connect } from 'react-redux'
+
 
 
 class ProductShow extends React.Component{
@@ -36,6 +41,36 @@ class ProductShow extends React.Component{
         })
 
     }
+
+    handleAddCart = () => {
+        const id = this.props.match.params.id
+        axios.get(`/products/${id}`,{
+            headers: {
+                'Authorization' : localStorage.getItem('Authorization')
+            }
+        })
+        .then(response => {
+            const product = response.data
+            const img =  response.data.asset.url
+            this.setState({product});
+            this.setState({img})
+            console.log(product,'product')
+            console.log('Im From Product Show')
+            console.log(product.asset.url,'URL')
+            this.props.dispatch(addCart(response.data))
+        })
+        .catch(err => {
+            console.log(err,'err')
+        })
+        Swal.fire({
+            icon: 'success',
+            title: 'Add Successfully',
+            showConfirmButton: false,
+            timer: 1500
+          })
+
+        
+    }
    
 
     render(){
@@ -62,8 +97,8 @@ class ProductShow extends React.Component{
                             <h6 className="description">{this.state.product.description}.</h6> 
                             <h6 className="rating">Rating : {this.state.product.rating}</h6> <br /> <br/>
 
-                            <button type="button" class="btn-add2cart btn btn-warning">Add to Cart</button>
-                            <button type="button" class="btn-buynow btn btn-warning">Buy Now</button>
+                            <button type="button" class="btn-add2cart btn btn-warning" onClick={this.handleAddCart }>Add to Cart</button>
+                            <button type="button" class="btn-buynow btn btn-warning" onClick={this.handleBuyNow}>Buy Now</button>
 
 
                         </div>
@@ -81,4 +116,4 @@ class ProductShow extends React.Component{
     }
 }
 
-export default ProductShow
+export default connect(addCart)(ProductShow)

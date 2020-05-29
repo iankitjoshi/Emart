@@ -115,7 +115,7 @@ class LModal extends React.Component{
         return(
             <div>
             
-            <span type="button" className="drop-btn btn btn-outline-secondary"  onClick={this.handleModal}>Login</span>
+            {/* <span type="button" className="drop-btn btn btn-outline-secondary"  onClick={this.handleModal}>Login</span> */}
 
                 <Modal
                 show={this.state.show}

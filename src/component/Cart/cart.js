@@ -4,6 +4,7 @@ import CNav from './CartNav'
 import MenuBar from '../Home/MenuBar'
 import Navigation from '../Home/footer'
 import Table from './table'
+import CartList from './tables'
 
 function Cart(){
     return(
@@ -15,7 +16,9 @@ function Cart(){
 
         <CNav />
 
-        <Table />
+        {/* <Table /> */}
+
+        <CartList />
         
         <Navigation />
 

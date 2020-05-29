@@ -1,41 +1,16 @@
 import React from 'react'
-const img1 = require('../../Public/Assets/IMG/tshirt.jpg')
+import { connect } from 'react-redux'
+import Swal from 'sweetalert2'
+import { addCart , removeCart } from '../../action/cart'
 
-class Table extends React.Component{
-    constructor(){
-        super()
-        this.state = {
-            products : [
-                {
-                    id : 1,
-                    image : img1,
-                    name : 'Top Up T-Shirt',
-                    price : 250,
-                    quantity : 5
-                },
-                {
-                    id : 2,
-                    image : img1,
-                    name : 'Polo Shoes',
-                    price : 550,
-                    quantity : 4
-                },
-                {
-                    id : 3,
-                    image : img1,
-                    name : ' Shoes',
-                    price : 350,
-                    quantity : 3
-                },
-                
-            ],
-            
-        }
+function CartList(props){
+    const handleRemoveChange = (id) => { 
+        props.dispatch(removeCart(id))
     }
 
-    handleNegChange = (id) => {
+    const handleNegChange = (id) => {
         console.log(id,'id');
-        let new_array = this.state.products.map(item =>{
+        let new_array = props.carts.map(item =>{
             if(item.id == id){
                 return {...item, quantity: item.quantity - 1};
             }
@@ -46,9 +21,9 @@ class Table extends React.Component{
         this.setState({products : new_array});
     }
 
-    handlePosChange = (id) => {
+    const handlePosChange = (id) => {
         console.log(id,'id');
-        let new_array = this.state.products.map(item =>{
+        let new_array = props.carts.map(item =>{
             if(item.id == id){
                 return {...item, quantity: item.quantity + 1};
             }
@@ -59,20 +34,10 @@ class Table extends React.Component{
         this.setState({products : new_array});
     }
 
-    handleRemoveChange = (id) => {
-        this.setState(() => {
-            return {
-                products: this.state.products.filter(product => product.id != id)
-            }
-        })
-        console.log('remove',this.state.products.filter(product => product.id != id))
 
-    }
-
-    render(){
-        console.log('render')
-        let { products } = this.state ;
-        console.log('render pro' , products);
+    // render(){
+    //     console.log('render')
+    //     let { products } = props.carts     console.log('render pro' , products);
         return(
             <div>
             <link href="https://fonts.googleapis.com/css2?family=Jaldi:wght@700&display=swap" rel="stylesheet" />
@@ -80,6 +45,7 @@ class Table extends React.Component{
             <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet" />
 
                 <br /><br /><br />
+                
                 <table style={{textAlign:'center' , marginBottom:'9%'}} className="table table-bordered">
                     <thead>
                         <tr>
@@ -92,25 +58,25 @@ class Table extends React.Component{
                         </tr>
                     </thead>
                     {
-                        this.state.products.map(product => {
+                        props.carts.map(product => {
                             return(
                                 <tbody>
                                     <tr key={product.id}>
-                                        <td scope="row" className="td-0"><img src={product.image} className="cart-img" /></td>
+                                        <td scope="row" className="td-0"><img src={product.asset.url} className="cart-img" /></td>
                                         <td className="td-1">{product.name}</td>
-                                        <td className="td-2">{product.price}</td>
+                                        <td className="td-2">{product.price || 0}</td>
                                         <td className="td-3">
                                             <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                                                 <div  class="btn-group mr-2" role="group" aria-label="First group">
-                                                    <button type="button" style={{marginLeft:'20%'}} onClick={() => {this.handleNegChange(product.id)}}  disabled={product.quantity == 1 } className="quantity-btn1  btn btn-secondary">-</button>
-                                                    <button type="button" className="quantity  btn btn-secondary"> {product.quantity} </button>
-                                                    <button type="button" onClick={() => {this.handlePosChange(product.id)}} disabled={product.quantity == 20 } className="quantity-btn1  btn btn-secondary">+</button>
+                                                    <button type="button" style={{marginLeft:'20%'}} onClick={() => {handleNegChange(product.id)}}  disabled={product.quantity == 1 } className="quantity-btn1  btn btn-secondary">-</button>
+                                                    <button type="button" className="quantity  btn btn-secondary"> {product.quantity || 1} </button>
+                                                    <button type="button" onClick={() => {handlePosChange(product.id)}} disabled={product.quantity == 20 } className="quantity-btn1  btn btn-secondary">+</button>
                                                 </div>
                                             </div>
                                         </td>
                                         {/* <td><button  onClick={() => {this.handleNegChange(product.id)}}  disabled={product.quantity == 1 }>-</button> {product.quantity} <button onClick={() => {this.handlePosChange(product.id)}} disabled={product.quantity == 20 }> + </button> </td> */}
-                                        <td className="td-4">{product.price * product.quantity} INR</td>
-                                        <td className="td-5"><button onClick={() => {this.handleRemoveChange(product.id)}} className="remove-btn  btn btn-secondary" >X</button></td>
+                                        <td className="td-4">{product.price * (product.quantity || 1)} INR</td>
+                                        <td className="td-5"><button onClick={() => {handleRemoveChange(product.id)}} className="remove-btn  btn btn-secondary" >X</button></td>
                                         
                                     </tr>
                                 </tbody>
@@ -148,8 +114,8 @@ class Table extends React.Component{
                                     <h4 className="cart-total" >CART TOTALS</h4>
                                     <hr style={{marginRight:'25%'}} />
                                     <br />
-                                    <p className="total">Subtotal  <span className="span1-price">{this.state.products.reduce((a,b) => (a+b.price * b.quantity),0 )}  INR </span>  </p>
-                                    <p className="total"> Total  <span className="span-price" > {this.state.products.reduce((a,b) => (a+b.price * b.quantity),0 )}  INR </span> </p><br />
+                                    <p className="total">Subtotal  <span className="span1-price">{props.carts.reduce((a,b) => (a+b.price *( b.quantity || 1)),0 )}  INR </span>  </p>
+                                    <p className="total"> Total  <span className="span-price" > {props.carts.reduce((a,b) => (a+b.price *( b.quantity || 1)),0 )}  INR </span> </p><br />
                                     <button className="checkout-btn" >PROCEED TO CHECKOUT</button>
                                 </div>
                             
@@ -160,7 +126,13 @@ class Table extends React.Component{
                 
             </div>
         )
+    // }
+}
+
+const mapStateToProps = (state) => {
+    return {
+        carts : state.carts
     }
 }
 
-export default Table
+export default connect(mapStateToProps)(CartList)
