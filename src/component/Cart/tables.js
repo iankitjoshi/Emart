@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Swal from 'sweetalert2'
-import { addCart , removeCart } from '../../action/cart'
+import { addCart , removeCart , quantityDecrease , quantityIncrease } from '../../action/cart'
 
 function CartList(props){
     const handleRemoveChange = (id) => { 
@@ -9,30 +9,31 @@ function CartList(props){
     }
 
     const handleNegChange = (id) => {
-        console.log(id,'id');
-        let new_array = props.carts.map(item =>{
-            if(item.id == id){
-                return {...item, quantity: item.quantity - 1};
-            }
-            return item;;
-        })
-        console.log(new_array,'new array')
+        // console.log(id,'id');
+        // let new_array = props.carts.map(item =>{
+        //     if(item.id == id){
+        //         return {...item, quantity: item.quantity - 1};
+        //     }
+        //     return item;;
+        // })
+        // console.log(new_array,'new array')
 
-        this.setState({products : new_array});
+        // this.setState({products : new_array});
+        props.dispatch(quantityDecrease(id))
     }
 
     const handlePosChange = (id) => {
-        console.log(id,'id');
-        let new_array = props.carts.map(item =>{
-            if(item.id == id){
-                return {...item, quantity: item.quantity + 1};
-            }
-            return item;;
-        })
-        console.log(new_array,'new array')
+        // console.log(id,'id');
+        // let new_array = props.carts.map(item =>{
+        //     if(item.id == id){
+        //         return {...item, quantity: item.quantity + 1};
+        //     }
+        //     return item;;
+        // })
+        // console.log(new_array,'new array')
 
-        this.setState({products : new_array});
-    }
+        // this.setState({products : new_array});
+        props.dispatch(quantityIncrease(id))    }
 
 
     // render(){

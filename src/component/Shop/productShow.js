@@ -39,6 +39,8 @@ class ProductShow extends React.Component{
         .catch(err => {
             console.log(err,'err')
         })
+        
+     
 
     }
 

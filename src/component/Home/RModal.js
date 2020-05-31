@@ -11,7 +11,7 @@ const img = require('../../Public/Assets/IMG/logo.png');
 
 
 
-class LModal extends React.Component{
+class RModal extends React.Component{
     constructor(){
         super()
         this.state = {
@@ -131,4 +131,4 @@ class LModal extends React.Component{
     }
 }
 
-export default LModal
+export default RModal
