@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route  } from 'react-router-dom'
+import { BrowserRouter, Route ,Switch  } from 'react-router-dom'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Swal from 'sweetalert2'
@@ -16,11 +16,13 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-
-        <Route path="/" component={FullHome}  exact={true} />
-        <Route path="/about" component={About} />
-        <Route path="/shop" component={Shop} />
-        <Route path="/cart" component={Cart} />
+        <Switch>
+          <Route path="/" component={FullHome}  exact={true} />
+          <Route path="/about" component={About} />
+          <Route path="/shop" component={Shop} />
+          <Route path="/cart" component={Cart} />
+       
+        
         {    
           localStorage.getItem('Authorization') ? (
               <div>
@@ -30,11 +32,12 @@ function App() {
           ) : (
               <div>
                   <LoginFirst />
+                 
               </div>
           )
          }
          
-
+         </Switch>
       </BrowserRouter>
     </div>
   );
