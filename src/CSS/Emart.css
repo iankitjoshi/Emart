@@ -754,21 +754,23 @@
 }
 
 .latest-btn{
-    font-size: 1.15vw;
+    text-align: center;
+    font-size: 1vw;
     background-color: rgb(216, 211, 211);
     border: none;
     width: 18%;
     border-radius: 2px;
     font-weight: 500;
-    margin-left: 56%;
+    margin-left: 53.1%;
     padding: 9px 13px;
 }
 
 .ref-btn{
-    font-size: 1.15vw;
+    text-align: center;
+    font-size: 1vw;
     background-color: rgb(228, 222, 222);
     border: none;
-    width: 18%;
+    width: 21%;
     border-radius: 2px;
     font-weight: 500;
     margin-left: 2%;
@@ -815,13 +817,14 @@
 }
 
 .card-img{
-    height: 50%;
-    margin-bottom: 10%;
+    height: 105px;
+    width: 40%;
+    margin-bottom: -3%;
 }
 
 .card-h5{
-    font-size: 1.5vw;
-    margin-top: -5px;
+    font-size: 1.3vw;
+    margin-top: -17px;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -832,9 +835,15 @@
 }
 
 .card-p1{
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     margin-top: -4%;
     font-family: 'Source Sans Pro', sans-serif;
+    /* margin-bottom: -10%; */
+}
+
+.shop-container{
+    margin-left: -7.5%;
+    margin-right: -3%;
 }
 
 /* ////////////// CART //////////// */
@@ -843,7 +852,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 70%;
     height: 15%;
 }
 
@@ -975,7 +984,7 @@
 }
 
 .image{
-    width: 75%;
+    width: 45%;
     height: auto;
     /* border: .5px solid black */
 }

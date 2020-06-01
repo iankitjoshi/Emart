@@ -94,7 +94,8 @@ class ProductShow extends React.Component{
                         <br/>
                             <h2 className="name"> {this.state.product.name} </h2>
                             {/* Offer Price : {this.state.product.offerPrice} FREE Delivery. Details Inclusive of all taxes<br /> */}
-                             <h6 style={{fontSize:'1.3vw',marginTop:'3.5%'}} >Price :<span className="price"> {this.state.product.price} /- </span> Inclusive of all taxes. </h6>
+                             <h6 style={{fontSize:'1.3vw',marginTop:'3.5%'}} >Offer Price :<span className="price"> {this.state.product.offerPrice} /- </span> Inclusive of all taxes. </h6>
+                             <h6 style={{fontSize:'1.2vw',marginTop:'3.5%'}}>Price: <s className="price">  {this.state.product.price} </s><span className="price"> /- </span> Inclusive of all taxes. </h6>
                              
                             <h6 className="description">{this.state.product.description}.</h6> 
                             <h6 className="rating">Rating : {this.state.product.rating}</h6> <br /> <br/>

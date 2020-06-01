@@ -27,13 +27,13 @@ class Cards extends React.Component{
 
     render() {
         return (
-            <div>
+            <div className='shop-container'>
                 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
 
                 <br />
                 <div className="card-main  card-deck">
-                    <div class="container">
-                        <div class="row row-cols-3">
+                    <div className="  container">
+                        <div class="row row-cols-4">
                         
                     {
                         this.state.products.map(product => {
@@ -45,7 +45,7 @@ class Cards extends React.Component{
                                             <div className="card  card-body">
                                                 <Link to={`/products/${product.id}`}> <h6 className="card-h5  card-title">{product.name}</h6></Link>
                                                 {/* <p className="card-p  card-text">{product.description}</p> */}
-                                                <p className="card-p1  card-text">{product.price} RS</p>
+                                                <p className="card-p1  card-text">{product.offerPrice} RS</p>
                                             </div>
                                             </div>
                                             </div>

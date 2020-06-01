@@ -15,8 +15,8 @@ class ShopHeader extends React.Component{
                     <div class="row">
 
                         <h5 className="shopall-h5" >Shop All </h5>
-                        <button className="latest-btn">LATEST</button>
-                        <button className="ref-btn">REFERENCE</button>
+                        <button className="latest-btn  btn btn-light">LATEST</button>
+                        <button className="ref-btn  btn btn-light">REFERENCE</button>
 
                     </div>
                 </div>
