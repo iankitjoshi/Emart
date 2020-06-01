@@ -65,7 +65,7 @@ function CartList(props){
                                     <tr key={product.id}>
                                         <td scope="row" className="td-0"><img src={product.asset.url} className="cart-img" /></td>
                                         <td className="td-1">{product.name}</td>
-                                        <td className="td-2">{product.price || 0}</td>
+                                        <td className="td-2">{product.offerPrice || 0}</td>
                                         <td className="td-3">
                                             <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                                                 <div  class="btn-group mr-2" role="group" aria-label="First group">
@@ -76,7 +76,7 @@ function CartList(props){
                                             </div>
                                         </td>
                                         {/* <td><button  onClick={() => {this.handleNegChange(product.id)}}  disabled={product.quantity == 1 }>-</button> {product.quantity} <button onClick={() => {this.handlePosChange(product.id)}} disabled={product.quantity == 20 }> + </button> </td> */}
-                                        <td className="td-4">{product.price * (product.quantity || 1)} INR</td>
+                                        <td className="td-4">{product.offerPrice * (product.quantity || 1)} INR</td>
                                         <td className="td-5"><button onClick={() => {handleRemoveChange(product.id)}} className="remove-btn  btn btn-secondary" >X</button></td>
                                         
                                     </tr>
@@ -115,8 +115,8 @@ function CartList(props){
                                     <h4 className="cart-total" >CART TOTALS</h4>
                                     <hr style={{marginRight:'25%'}} />
                                     <br />
-                                    <p className="total">Subtotal  <span className="span1-price">{props.carts.reduce((a,b) => (a+b.price *( b.quantity || 1)),0 )}  INR </span>  </p>
-                                    <p className="total"> Total  <span className="span-price" > {props.carts.reduce((a,b) => (a+b.price *( b.quantity || 1)),0 )}  INR </span> </p><br />
+                                    <p className="total">Subtotal  <span className="span1-price">{props.carts.reduce((a,b) => (a+b.offerPrice *( b.quantity || 1)),0 )}  INR </span>  </p>
+                                    <p className="total"> Total  <span className="span-price" > {props.carts.reduce((a,b) => (a+b.offerPrice *( b.quantity || 1)),0 )}  INR </span> </p><br />
                                     <button className="checkout-btn" >PROCEED TO CHECKOUT</button>
                                 </div>
                             
