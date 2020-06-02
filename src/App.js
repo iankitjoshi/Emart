@@ -10,6 +10,11 @@ import Shop from './component/Shop/Shop';
 import Cart from './component/Cart/cart';
 import ProductShow from './component/Shop/productShow'
 import LoginFirst from './component/Home/LoginFirst';
+import Product from './component/Product/product';
+import AddProduct from './component/Product/AddProduct';
+import UpdateDeleteProduct from './component/Product/UpdateProduct';
+
+
 
 
 function App() {
@@ -21,18 +26,19 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/shop" component={Shop} />
           <Route path="/cart" component={Cart} />
-       
+          {/* <Route path="/add" component={AddProduct} />
+          <Route path="/update" component={UpdateDeleteProduct} /> */}
+
         
         {    
           localStorage.getItem('Authorization') ? (
               <div>
                 <Route path="/products/:id" component={ProductShow} />
-                {/* {window.location.reload()} */}
+                <Route path="/products"  component={UpdateDeleteProduct} />
               </div>
           ) : (
               <div>
                   <LoginFirst />
-                 
               </div>
           )
          }

@@ -12,7 +12,8 @@ function Menu(){
             <Link to="/about" className="menus">ABOUT</Link>
             <Link to="/shop" className="menus">SHOP</Link>
             <Link to="/cart" className="menus">CATALOGUE</Link>
-            <Link to="/new" className="menus">NEW ARRIVALS</Link>
+            {/* <Link to="/new" className="menus">NEW ARRIVALS</Link> */}
+            <Link to="/products" className="menus">PRODUCT</Link>
             <Link to="/contact" className="menus">CONTACT</Link>
             </nav>
         </div>

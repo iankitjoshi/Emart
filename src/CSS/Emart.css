@@ -835,9 +835,11 @@
 }
 
 .card-p1{
-    font-size: 1.1vw;
+    font-weight: 800;
+    font-size: 1.2vw;
     margin-top: -4%;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Merriweather', serif;
+        color: #B12704;
     /* margin-bottom: -10%; */
 }
 
@@ -992,7 +994,8 @@
 .price{
     font-size: 1.6vw;
     color: #B12704;
-    font-family: 'Rubik', sans-serif;
+    /* font-family: 'Rubik', sans-serif; */
+    font-family: 'Merriweather', serif;
 }
 
 .name{
@@ -1059,4 +1062,31 @@
     font-family: 'Merriweather', serif;
     color: rgb(5, 5, 59);
     font-size: 1.3vw;
+}
+
+.rupee-icon{
+    font-size: medium;
+    color: #ad1818;
+}
+
+
+/* /////////////// Update/Delete ///////////// */
+
+.update-btn{
+    width: 38%;
+    border-radius: 0px;
+    font-size: 1.2vw;
+    font-family: 'Roboto Slab', serif;
+}
+
+.delete-btn{
+    width: 38%;
+    border-radius: 0px;
+    margin-left: 3%;
+    font-size: 1.2vw;
+    font-family: 'Roboto Slab', serif;
+}
+
+.td-1-update{
+    font-weight: bold;
 }

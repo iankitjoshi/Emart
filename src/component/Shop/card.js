@@ -1,6 +1,8 @@
 import React from 'react'
 import axios from '../../config/axios'
 import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faRupeeSign } from '@fortawesome/free-solid-svg-icons'
 
 const img = require('../../Public/Assets/IMG/shoes.jpg')
 
@@ -45,7 +47,7 @@ class Cards extends React.Component{
                                             <div className="card  card-body">
                                                 <Link to={`/products/${product.id}`}> <h6 className="card-h5  card-title">{product.name}</h6></Link>
                                                 {/* <p className="card-p  card-text">{product.description}</p> */}
-                                                <p className="card-p1  card-text">{product.offerPrice} RS</p>
+                                                <p className="card-p1  card-text"><FontAwesomeIcon icon={faRupeeSign} className="rupee-icon" /> {product.offerPrice} /-</p>
                                             </div>
                                             </div>
                                             </div>

@@ -5,6 +5,8 @@ import Menu from '../Home/MenuBar'
 import Navigation from '../Home/footer'
 import Swal from 'sweetalert2'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faRupeeSign } from '@fortawesome/free-solid-svg-icons'
 import { addCart  } from '../../action/cart'
 import { connect } from 'react-redux'
 
@@ -91,11 +93,11 @@ class ProductShow extends React.Component{
                         </div>
 
                         <div className="col">
-                        <br/>
+                        
                             <h2 className="name"> {this.state.product.name} </h2>
                             {/* Offer Price : {this.state.product.offerPrice} FREE Delivery. Details Inclusive of all taxes<br /> */}
-                             <h6 style={{fontSize:'1.3vw',marginTop:'3.5%'}} >Offer Price :<span className="price"> {this.state.product.offerPrice} /- </span> Inclusive of all taxes. </h6>
-                             <h6 style={{fontSize:'1.2vw',marginTop:'3.5%'}}>Price: <s className="price">  {this.state.product.price} </s><span className="price"> /- </span> Inclusive of all taxes. </h6>
+                             <h6 style={{fontSize:'1.3vw',marginTop:'3.5%',}} > M.R.P.<span style={{letterSpacing:'5px'}}> : </span>  <FontAwesomeIcon icon={faRupeeSign} className="rupee-icon" /><span className="price"> {this.state.product.offerPrice} /- </span> Inclusive of all taxes. </h6>
+                             <h6 style={{fontSize:'1.2vw',marginTop:'3.5%'}}>Price <span style={{letterSpacing:'5px'}}> :  </span><FontAwesomeIcon icon={faRupeeSign} className="rupee-icon" /> <s className="price">  {this.state.product.price} </s><span className="price"> /- </span>  </h6>
                              
                             <h6 className="description">{this.state.product.description}.</h6> 
                             <h6 className="rating">Rating : {this.state.product.rating}</h6> <br /> <br/>
