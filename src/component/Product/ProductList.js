@@ -4,11 +4,11 @@ import axios from '../../config/axios'
 import Swal from 'sweetalert2'
 import Menu from '../Home/MenuBar'
 
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRupeeSign } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 
-class UpdateDeleteProduct extends React.Component{
+class ProductList extends React.Component{
     constructor(){
         super()
         this.state = {
@@ -63,6 +63,7 @@ class UpdateDeleteProduct extends React.Component{
                 <Emart />
                 <Menu />
 
+
                 <table style={{textAlign:'center' , marginBottom:'9%',marginTop:'6%'}} className="table table-bordered">
                     <thead>
                         <tr>
@@ -84,7 +85,7 @@ class UpdateDeleteProduct extends React.Component{
                                             <td scope="row" className="td-0"><img src={product.asset.url} className="cart-img" /></td>
                                             <td className="td-1-update">{product.name}</td>
                                             <td className="td-1-update"><FontAwesomeIcon icon={faRupeeSign} className="rupee-icon-" /> {product.offerPrice} /-</td>
-                                            <td className="td-1-update"><button className="update-btn  btn btn-info" onClick={this.handleUpdate}>UPDATE</button><button className="delete-btn  btn btn-danger" onClick={() => {this.handleDelete(product.id)}}>DELETE</button></td>
+                                            <td className="td-1-update"><Link to={`/product/${product.id}`}><button className="update-btn  btn btn-info" >VIEW</button></Link><button className="delete-btn  btn btn-danger" onClick={() => {this.handleDelete(product.id)}}>DELETE</button></td>
                                         </tr>
 
                                     </tbody>
@@ -93,10 +94,10 @@ class UpdateDeleteProduct extends React.Component{
                         }
                    
                 </table>
-
+                <Link to="/products/new">Add Products</Link>
             </div>
         )
     }
 }
 
-export default UpdateDeleteProduct
+export default ProductList

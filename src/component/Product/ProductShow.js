@@ -1,9 +1,7 @@
 import React from 'react'
 import axios from '../../config/axios'
-import Emart from '../Home/header'
-import Menu from '../Home/MenuBar'
-import Navigation from '../Home/footer'
 import Swal from 'sweetalert2'
+import {Link} from 'react-router-dom'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRupeeSign } from '@fortawesome/free-solid-svg-icons'
@@ -12,7 +10,7 @@ import { connect } from 'react-redux'
 
 
 
-class ProductShow extends React.Component{
+class ShowProduct extends React.Component{
     constructor(){
         super()
         this.state = {
@@ -23,6 +21,7 @@ class ProductShow extends React.Component{
 
     componentDidMount(){
         const id = this.props.match.params.id
+        console.log(this.props.match.params.id,' this.props.match.params.id In Product Show')
         axios.get(`/products/${id}`,{
             headers: {
                 'Authorization' : localStorage.getItem('Authorization')
@@ -41,40 +40,39 @@ class ProductShow extends React.Component{
         .catch(err => {
             console.log(err,'err')
         })
-        
-     
+
 
     }
 
-    handleAddCart = () => {
-        const id = this.props.match.params.id
-        axios.get(`/products/${id}`,{
-            headers: {
-                'Authorization' : localStorage.getItem('Authorization')
-            }
-        })
-        .then(response => {
-            const product = response.data
-            const img =  response.data.asset.url
-            this.setState({product});
-            this.setState({img})
-            console.log(product,'product')
-            console.log('Im From Product Show')
-            console.log(product.asset.url,'URL')
-            this.props.dispatch(addCart(response.data))
-        })
-        .catch(err => {
-            console.log(err,'err')
-        })
-        Swal.fire({
-            icon: 'success',
-            title: 'Add Successfully',
-            showConfirmButton: false,
-            timer: 1500
-          })
+    // handleAddCart = () => {
+    //     const id = this.props.match.params.id
+    //     axios.get(`/products/${id}`,{
+    //         headers: {
+    //             'Authorization' : localStorage.getItem('Authorization')
+    //         }
+    //     })
+    //     .then(response => {
+    //         const product = response.data
+    //         const img =  response.data.asset.url
+    //         this.setState({product});
+    //         this.setState({img})
+    //         console.log(product,'product')
+    //         console.log('Im From Product Show')
+    //         console.log(product.asset.url,'URL')
+    //         this.props.dispatch(addCart(response.data))
+    //     })
+    //     .catch(err => {
+    //         console.log(err,'err')
+    //     })
+    //     Swal.fire({
+    //         icon: 'success',
+    //         title: 'Add Successfully',
+    //         showConfirmButton: false,
+    //         timer: 1500
+    //       })
 
         
-    }
+    // }
    
 
     render(){
@@ -82,9 +80,9 @@ class ProductShow extends React.Component{
             <div>
             
 
-                <Emart />
+                {/* <Emart />
                 
-                <Menu />
+                <Menu /> */}
                 <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
                 <div className="container-div  container">
                     <div className="row">
@@ -102,10 +100,10 @@ class ProductShow extends React.Component{
                             <h6 className="description">{this.state.product.description}.</h6> 
                             <h6 className="rating">Rating : {this.state.product.rating}</h6> <br/><br/>
 
-
+{/* 
                             <button type="button" class="btn-add2cart btn btn-warning" onClick={this.handleAddCart }>Add to Cart</button>
                             <button type="button" class="btn-buynow btn btn-warning" onClick={this.handleBuyNow}>Buy Now</button>
-
+ */}
 
                         </div>
 
@@ -116,10 +114,13 @@ class ProductShow extends React.Component{
                
                 <br />
                 <hr />
-                <Navigation />
+                {/* <Navigation /> */}
+                <Link to={`/products/edit/${this.state.product.id}`}>Edit |</Link>  
+                {/* <Link to="/products">Back |</Link> */}
+           
             </div>
         )
     }
 }
 
-export default connect(addCart)(ProductShow)
+export default ShowProduct

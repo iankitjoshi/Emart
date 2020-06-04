@@ -10,9 +10,11 @@ import Shop from './component/Shop/Shop';
 import Cart from './component/Cart/cart';
 import ProductShow from './component/Shop/productShow'
 import LoginFirst from './component/Home/LoginFirst';
-import Product from './component/Product/product';
-import AddProduct from './component/Product/AddProduct';
-import UpdateDeleteProduct from './component/Product/UpdateProduct';
+// import UpdateDeleteProduct from './component/Product/UpdateProduct';
+import ProductEdit from './component/Product/EditProduct';
+import ProductNew from './component/Product/NewProduct';
+import ShowProduct from './component/Product/ProductShow'
+import ProductList from './component/Product/ProductList';
 
 
 
@@ -33,8 +35,13 @@ function App() {
         {    
           localStorage.getItem('Authorization') ? (
               <div>
-                <Route path="/products/:id" component={ProductShow} />
-                <Route path="/products"  component={UpdateDeleteProduct} />
+                <Route path="/products"  component={ProductList} exact={true } />
+                <Route path="/products/new" component={ProductNew} exact={true }/>
+                <Route path="/products/edit/:id" component={ProductEdit} />
+                <Route path="/product/:id" component={ShowProduct} />
+                <Route path="/products/:id" component={ProductShow} exact={true}/>
+
+                {/* <Route path="/products/:id" component={ProductEdit}/> */}
               </div>
           ) : (
               <div>
