@@ -2,6 +2,10 @@ import React from 'react'
 import axios from '../../config/axios'
 import Swal from 'sweetalert2'
 import AddProductForm from './AddProductForm'
+import Emart from '../Home/header'
+import Menu from '../Home/MenuBar.js'
+import Navigation from '../Home/footer'
+
 
 
 class ProductNew extends React.Component{
@@ -31,10 +35,19 @@ class ProductNew extends React.Component{
     }
     render() {
         return (
-            <div>
-                <h2>Add Products</h2>
+            <div >
+
+                <Emart />
+
+                <Menu />
+                <link href="https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap" rel="stylesheet" />
+
+                <h2 className="h1-add-product">Add Products</h2>
 
                 <AddProductForm handleSubmit={this.handleSubmit} />
+
+                <hr />
+                <Navigation />
             </div>
         )
     }

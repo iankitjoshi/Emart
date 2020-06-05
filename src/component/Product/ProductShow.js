@@ -2,6 +2,9 @@ import React from 'react'
 import axios from '../../config/axios'
 import Swal from 'sweetalert2'
 import {Link} from 'react-router-dom'
+import Emart from '../Home/header'
+import Navigation from '../Home/footer.js'
+import Menu from '../Home/MenuBar.js'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRupeeSign } from '@fortawesome/free-solid-svg-icons'
@@ -78,11 +81,13 @@ class ShowProduct extends React.Component{
     render(){
         return(
             <div>
-            
-
-                {/* <Emart />
+            <Emart />
                 
-                <Menu /> */}
+                <Menu />
+            
+            <Link to={`/products/edit/${this.state.product.id}`}><button className="add-product-btn btn btn-primary">Edit</button></Link>
+
+                
                 <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
                 <div className="container-div  container">
                     <div className="row">
@@ -114,8 +119,9 @@ class ShowProduct extends React.Component{
                
                 <br />
                 <hr />
-                {/* <Navigation /> */}
-                <Link to={`/products/edit/${this.state.product.id}`}>Edit |</Link>  
+                <Navigation />
+                
+
                 {/* <Link to="/products">Back |</Link> */}
            
             </div>

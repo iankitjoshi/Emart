@@ -1,15 +1,6 @@
 import React from 'react'
-import { Button , Modal} from 'react-bootstrap';
 import TextField from '@material-ui/core/TextField';
 import '../../CSS/Emart.css'
-import axios from '../../config/axios.js'
-import EmailValidator from 'email-validator';
-import Swal from 'sweetalert2'
-
-
-const img = require('../../Public/Assets/IMG/logo.png');
-
-
 
 class AddProductForm extends React.Component{
     constructor(props){
@@ -36,41 +27,10 @@ class AddProductForm extends React.Component{
             rating : this.state.rating,
             review : this.state.review
         }
-
-        this.props.handlSubmit(formData)
-        // formData.append('image',this.state.asset,this.state.asset.name)
-        // this.setState({formData})
-        // console.log('formData',formData)
-
-
-        // axios.post('/products',formData,{
-        //     headers: {
-        //         'Authorization' : localStorage.getItem('Authorization')
-        //     },
-        //     onUploadProgress : ProgressEvent => {
-        //         console.log('Upload File', (ProgressEvent.loaded / ProgressEvent.total * 100 ),'%')
-        //     }
-        // })
-        // .then((response) => {
-        //     console.log(response,'response')
-        //     Swal.fire({
-        //         icon: 'success',
-        //         title: 'Add Product Successfully',
-        //         showConfirmButton: false,
-        //         timer: 2000
-        //       })
-        //     window.location.reload()
-        // })
-        
-        // .catch((err) => {
-        //     alert(err)
-        // })
+        this.props.handleSubmit(formData)
     }
 
 
-    // handleModal = () => {
-    //     this.setState({show:!this.state.show})
-    // }
 
     handleChange = (e) => {
         this.setState({
@@ -89,11 +49,14 @@ class AddProductForm extends React.Component{
 
     render(){
         return(
-            <div>
-                    
+            <div style={{marginBottom:'-9%'}}>
+    
             
-        
-                        <form className="" onSubmit={this.handlSubmit}>
+                        <div className="addform-container  container">
+
+                        <link href="https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap" rel="stylesheet" />
+
+                        <form className="add-form" onSubmit={this.handlSubmit}>
 
 
                             <TextField type="text" className="product-form"  value={this.state.name} onChange={this.handleChange} id={this.state.name} name="name" label=" Name" /><br /><br />
@@ -116,6 +79,7 @@ class AddProductForm extends React.Component{
 
                         
                         </form>
+                        </div>
                         <br/>
                         <br/>
 

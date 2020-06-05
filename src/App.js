@@ -28,6 +28,8 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/shop" component={Shop} />
           <Route path="/cart" component={Cart} />
+          <Route path="/products/new" component={ProductNew} exact={true }/>
+
           {/* <Route path="/add" component={AddProduct} />
           <Route path="/update" component={UpdateDeleteProduct} /> */}
 
@@ -36,7 +38,6 @@ function App() {
           localStorage.getItem('Authorization') ? (
               <div>
                 <Route path="/products"  component={ProductList} exact={true } />
-                <Route path="/products/new" component={ProductNew} exact={true }/>
                 <Route path="/products/edit/:id" component={ProductEdit} />
                 <Route path="/product/:id" component={ShowProduct} />
                 <Route path="/products/:id" component={ProductShow} exact={true}/>

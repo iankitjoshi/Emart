@@ -1089,9 +1089,35 @@
     margin-left: 3%;
     font-size: 1.2vw;
     font-family: 'Roboto Slab', serif;
-}
+}   
 
 .td-1-update{
     font-weight: bold;
 }
 
+.add-form{
+    margin-left: 12%;
+    margin-right: 50%;
+    margin-bottom: 10%;
+}
+
+.addform-container{
+    /* box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); */
+        /* margin-bottom: 10%; */
+}
+
+.h1-add-product{
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    text-align: center;
+    /* margin-bottom: 2%; */
+    margin-top: 3%;
+
+}
+
+.add-product-btn{
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 12%;
+    width: 15%;
+    margin-top: 5%;
+    font-size: 1.4vw;
+}

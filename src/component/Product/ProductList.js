@@ -63,6 +63,7 @@ class ProductList extends React.Component{
                 <Emart />
                 <Menu />
 
+              <Link to="/products/new"><button className="add-product-btn btn btn-primary">Add Product</button></Link>
 
                 <table style={{textAlign:'center' , marginBottom:'9%',marginTop:'6%'}} className="table table-bordered">
                     <thead>
@@ -94,7 +95,6 @@ class ProductList extends React.Component{
                         }
                    
                 </table>
-                <Link to="/products/new">Add Products</Link>
             </div>
         )
     }
