@@ -28,6 +28,7 @@ class AddProductForm extends React.Component{
             review : this.state.review
         }
         this.props.handleSubmit(formData)
+        console.log(formData,'formData in Add')
     }
 
 
@@ -65,7 +66,7 @@ class AddProductForm extends React.Component{
 
                             <TextField type="text" className="product-form"  value={this.state.offerPrice} onChange={this.handleChange} id={this.state.offerPrice} name="offerPrice" label=" Offer Price" /><br /><br />
                             
-                            <label htmlFor="Image">Image:- </label>
+                            <label htmlFor="Image">Image:- </label>> <br />
                             <input type="file" className="product-form"   onChange={this.fileUpload} id={this.state.asset}  /><br />
                             
                             <TextField type="text" className="product-form"  value={this.state.description} onChange={this.handleChange} id={this.state.description} name="description" label=" description" /><br /><br />
