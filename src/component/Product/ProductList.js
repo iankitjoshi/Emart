@@ -83,7 +83,7 @@ class ProductList extends React.Component{
                                     <tbody>
                                         <tr key={product.id}>
                                             <td  className="td-1-update">{i+1}</td>
-                                            <td scope="row" className="td-0"><img src={product.asset.url} className="cart-img" /></td>
+                                            <td style={{height:'100px'}} scope="row" className="td-0"><span><img src={product.asset.url} className="cart-img" /></span></td>
                                             <td className="td-1-update">{product.name}</td>
                                             <td className="td-1-update"><FontAwesomeIcon icon={faRupeeSign} className="rupee-icon-" /> {product.offerPrice} /-</td>
                                             <td className="td-1-update"><Link to={`/product/${product.id}`}><button className="update-btn  btn btn-info" >VIEW</button></Link><button className="delete-btn  btn btn-danger" onClick={() => {this.handleDelete(product.id)}}>DELETE</button></td>

@@ -107,7 +107,7 @@ class RModal extends React.Component{
                             
                             <TextField type="text"   value={this.state.phone} onChange={this.handleChange} id={this.state.phone} name="phone" label=" Mobile" /><br /><br />
                             
-                            <TextField type="text"   value={this.state.password} onChange={this.handleChange} id={this.state.password} name="password" label=" Password" /><br /><br />
+                            <TextField type="password"   value={this.state.password} onChange={this.handleChange} id={this.state.password} name="password" label=" Password" /><br /><br />
 
                             {/* <TextField type="text"   value={this.state.conpassword} onChange={this.handleChange} id={this.state.conpassword} name="conpassword" label="Confirm Password" /><br /><br /> */}
 

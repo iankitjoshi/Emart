@@ -136,7 +136,7 @@ class LModal extends React.Component{
                         <form className="col" onSubmit={this.handleSubmit}>
                             <TextField type="text"   value={this.state.email} onChange={this.handleChange} id={this.state.email} name="email" label=" Email" /><br /><br />
 
-                            <TextField type="text"   value={this.state.password} onChange={this.handleChange} id={this.state.password} name="password" label=" Password" /><br /><br />
+                            <TextField type="password"   value={this.state.password} onChange={this.handleChange} id={this.state.password} name="password" label=" Password" /><br /><br />
                             <button type="button" className="drop-btn-forgot btn btn-outline-secondary" onClick={this.handlePasswordClick}>Forgot Password ?</button>
 
                             <input className="submit-button  btn btn-info" type="submit" />

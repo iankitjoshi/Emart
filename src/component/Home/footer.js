@@ -53,7 +53,7 @@ class Navigation extends React.Component{
                     </div>
                 </div>
                 <hr/>
-                <p className="copyright">Copyright @2020 All reserved | This template is made for E-Mart.</p>
+                <p className="copyright">Copyright @2020 All reserved |</p>
             </div>
         )
     }

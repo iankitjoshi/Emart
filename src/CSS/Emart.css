@@ -1,11 +1,15 @@
 
 .emart{
-    margin-left: 27%;
+    margin-left: 22.5%;
     border-radius: 0px;
-    margin-right: 50%;
+    margin-right: 27%;
     border: 1.5px solid black;
     font-size: 1.2vw;
     font-family: 'Times New Roman', Times, serif;
+}
+
+.form-inline{
+    margin-left: 6.2%;
 }
 
 .search-control{
@@ -16,6 +20,10 @@
 .emart-navbar{
     background-color: white !important;
     margin-top: 3%;
+}
+
+.dropdown{
+    margin-left: 0% !important;
 }
 
 .search-btn{
@@ -855,11 +863,12 @@
 /* ////////////// CART //////////// */
 
 .cart-img{
-    display: block;
+    /* display: block;
     margin-left: auto;
-    margin-right: auto;
-    width: 35%;
-    height: 19%;
+    margin-right: auto; */
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 
