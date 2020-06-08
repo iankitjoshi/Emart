@@ -9,7 +9,7 @@ class AddProductForm extends React.Component{
             name: props.name ? props.name : '' ,
             price: props.price ? props.price : '' ,
             offerPrice : props.offerPrice ? props.offerPrice : '' ,
-            asset : undefined,
+            asset : props.asset ? props.asset : null ,
             description : props.description ? props.description : '' ,
             rating : props.rating ? props.rating : '' ,
             review : props.review ? props.review : ''
@@ -17,18 +17,26 @@ class AddProductForm extends React.Component{
     }
 
     handlSubmit = (e) => {
-        e.preventDefault()
-        const formData = {
-            name : this.state.name,
-            price : this.state.price,
-            offerPrice : this.state.offerPrice,
-            asset : this.state.asset,
-            description : this.state.description,
-            rating : this.state.rating,
-            review : this.state.review
-        }
-        this.props.handleSubmit(formData)
-        console.log(formData,'formData in Add')
+        e.preventDefault();
+        const fd = new FormData();
+        fd.append("name", this.state.name);
+        fd.append("price",this.state.price)
+        fd.append("offerPrice",this.state.offerPrice)
+        fd.append("asset",this.state.asset)
+        fd.append("description",this.state.description)
+        fd.append("rating",this.state.rating)
+        fd.append("review",this.state.review)
+        // const formData = {
+        //     name : this.state.name,
+        //     price : this.state.price,
+        //     offerPrice : this.state.offerPrice,
+        //     asset : this.state.asset,
+        //     description : this.state.description,
+        //     rating : this.state.rating,
+        //     review : this.state.review
+        // }
+        this.props.handleSubmit(fd)
+        console.log(fd,'formData in Add')
     }
 
 
