@@ -44,7 +44,14 @@ class LModal extends React.Component{
                     localStorage.setItem('Name',name)
 
                     // this.props.history.push('/')
-                    window.location.reload()
+                    // window.location.reload()
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Login Successfully',
+                        showConfirmButton: false,
+                        timer: 2000
+                      })
+                    window.location.href = "/"
                 }
                 // Swal.fire({
                 //     icon: 'success',

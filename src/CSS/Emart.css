@@ -60,7 +60,6 @@
     font-size: 1.2vw;
     /* font-family: 'Times New Roman', Times, serif; */
     font-family: 'Roboto Slab', serif;
-
 }
 
 
@@ -310,7 +309,7 @@
     /* margin-top: 6%; */
     margin: 5% auto;
     transition: all 1s ease;
-    
+    object-fit: contain;
 
 }
 
@@ -1001,6 +1000,7 @@
 .image{
     width: 45%;
     height: auto;
+    object-fit: contain;
     /* border: .5px solid black */
 }
 

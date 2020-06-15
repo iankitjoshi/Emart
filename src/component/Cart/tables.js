@@ -2,6 +2,8 @@ import React from 'react'
 import { connect } from 'react-redux'
 import Swal from 'sweetalert2'
 import { addCart , removeCart , quantityDecrease , quantityIncrease } from '../../action/cart'
+import LModal from '../Home/LModal'
+import LoginFirst from '../Home/LoginFirst'
 
 function CartList(props){
     const handleRemoveChange = (id) => { 
@@ -35,6 +37,15 @@ function CartList(props){
         // this.setState({products : new_array});
         props.dispatch(quantityIncrease(id))    }
 
+    const handleCheckOut = () => {
+        console.log('handleCheckOut')
+        if(localStorage.getItem('Authorization')){
+            return console.log('Authorization..Payment Page')
+        } else {
+           window.location.href = "/login"
+           
+        }
+    } 
 
     // render(){
     //     console.log('render')
@@ -63,7 +74,7 @@ function CartList(props){
                             return(
                                 <tbody>
                                     <tr key={product.id}>
-                                        <td scope="row" className="td-0"><img src={product.asset.url} className="cart-img" /></td>
+                                    <td style={{height:'100px'}} scope="row" className="td-0"><span><img src={product.asset.url} className="cart-img" /></span></td>
                                         <td className="td-1">{product.name}</td>
                                         <td className="td-2">{product.offerPrice || 0}</td>
                                         <td className="td-3">
@@ -84,7 +95,6 @@ function CartList(props){
                             )
                         })
                     }
-                   
                     </table>
 
                     <div class="container">
@@ -117,7 +127,7 @@ function CartList(props){
                                     <br />
                                     <p className="total">Subtotal  <span className="span1-price">{props.carts.reduce((a,b) => (a+b.offerPrice *( b.quantity || 1)),0 )}  INR </span>  </p>
                                     <p className="total"> Total  <span className="span-price" > {props.carts.reduce((a,b) => (a+b.offerPrice *( b.quantity || 1)),0 )}  INR </span> </p><br />
-                                    <button className="checkout-btn" >PROCEED TO CHECKOUT</button>
+                                    <button className="checkout-btn"  onClick={() => {handleCheckOut()}} >PROCEED TO CHECKOUT</button>
                                 </div>
                             
                         </div>

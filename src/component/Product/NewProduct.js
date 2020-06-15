@@ -9,8 +9,8 @@ import Navigation from '../Home/footer'
 
 
 class ProductNew extends React.Component{
-    handleSubmit = (formData) => {
-        axios.post('/products',formData,{
+    handleSubmit = (fd) => {
+        axios.post('/products',fd,{
             headers: {
                 'Authorization' : localStorage.getItem('Authorization')
             },

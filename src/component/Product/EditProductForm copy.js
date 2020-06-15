@@ -2,7 +2,7 @@ import React from 'react'
 import TextField from '@material-ui/core/TextField';
 import '../../CSS/Emart.css'
 
-class AddProductForm extends React.Component{
+class EditProductForm extends React.Component{
     constructor(props){
         super(props)
         this.state = {
@@ -18,25 +18,25 @@ class AddProductForm extends React.Component{
 
     handlSubmit = (e) => {
         e.preventDefault();
-        const fd = new FormData();
-        fd.append("name", this.state.name);
-        fd.append("price",this.state.price)
-        fd.append("offerPrice",this.state.offerPrice)
-        fd.append("asset",this.state.asset)
-        fd.append("description",this.state.description)
-        fd.append("rating",this.state.rating)
-        fd.append("review",this.state.review);
-        // const formDatas = {
-        //     name : this.state.name,
-        //     price : this.state.price,
-        //     offerPrice : this.state.offerPrice,
-        //     asset : this.state.asset,
-        //     description : this.state.description,
-        //     rating : this.state.rating,
-        //     review : this.state.review
-        // }
-        this.props.handleSubmit(fd)
-        console.log(fd,'formData in Add')
+        // const fd = new FormData();
+        // fd.append("name", this.state.name);
+        // fd.append("price",this.state.price)
+        // fd.append("offerPrice",this.state.offerPrice)
+        // fd.append("asset",this.state.asset)
+        // fd.append("description",this.state.description)
+        // fd.append("rating",this.state.rating)
+        // fd.append("review",this.state.review);
+        const formDatas = {
+            name : this.state.name,
+            price : this.state.price,
+            offerPrice : this.state.offerPrice,
+            asset : this.state.asset,
+            description : this.state.description,
+            rating : this.state.rating,
+            review : this.state.review
+        }
+        this.props.handleSubmit(formDatas)
+        console.log(formDatas,'formData in Add')
     }
 
     
@@ -98,4 +98,4 @@ class AddProductForm extends React.Component{
     }
 }
 
-export default AddProductForm
+export default EditProductForm

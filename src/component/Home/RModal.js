@@ -51,7 +51,8 @@ class RModal extends React.Component{
                     timer: 1500
                   })
             })
-            window.location.reload()
+            // window.location.reload()
+            window.location.href = "/"
             .catch((err) => {
                 alert(err)
             })

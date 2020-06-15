@@ -21,7 +21,7 @@ class ProductList extends React.Component{
             .then(response => {
                const products = response.data.values
                this.setState({products})
-               console.log(products,'products')
+               console.log(products,'products in product list')
             })
             .catch(err => {
                 console.log(err,'err')

@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from '../../config/axios.js'
-import AddProductForm from './AddProductForm'
+import EditProductForm from './EditProductForm copy'
 import Emart from '../Home/header'
 import Navigation from '../Home/footer.js'
 import Menu from '../Home/MenuBar.js'
@@ -16,16 +16,20 @@ class ProductEdit extends React.Component{
         }
     }
 
-    handleSubmit = (formData) => {
+    handleSubmit = (formDatas) => {
         // console.log(this.props.match.params.id,'this.props.match.params.id1')
-        axios.patch(`/products/${this.props.match.params.id}`,formData,{
+        axios.patch(`/products/${this.props.match.params.id}`,formDatas,{
             headers: {
                 'Authorization' : localStorage.getItem('Authorization')
             },
+            onUploadProgress : Progresvent => {
+                console.log('formDatas', formDatas)
+            }
+            
         })
         .then(response => {
             const products = response.data
-            console.log(products,'products')
+            console.log(products,'products in Edit Product')
             Swal.fire({
                 icon: 'success',
                 title: 'Edit Product Successfully',
@@ -66,7 +70,7 @@ class ProductEdit extends React.Component{
 
                 <h3 className="h1-add-product">Edit Products</h3>
                 {
-                    Object.keys(this.state.products).length != 0 && <AddProductForm {...this.state.products} handleSubmit={this.handleSubmit} />
+                    Object.keys(this.state.products).length != 0 && <EditProductForm {...this.state.products} handleSubmit={this.handleSubmit} />
                 }
                 
                 <hr />
